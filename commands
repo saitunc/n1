@@ -1,0 +1,81 @@
+show projects (chain name) -- Shows available projects at the chain you choose
+install (project name) -- Installs project you choose.
+
+info -- See all shortcut commands
+balance -- See your balance  ($EXECUTE query bank balances $WALLET_NAME)
+valoper -- See your valoper address($EXECUTE keys show $WALLET_NAME --bech=val)
+send 100 token -- Send token to another wallet 
+100 ad $GOVERMENT_TOKEN 
+$EXECUTE tx bank send $WALLET_NAME <TO_WALLET_ADDRESS> 10000000ulyl
+
+logs -- Check your logs (journalctl -fu $EXECUTE -o cat)
+start node -- Starts your node (systemctl start $EXECUTE)
+stop node  -- Stops your node (systemctl stop $EXECUTE)
+restart node -- Restarts your node (systemctl restart $EXECUTE)
+status node --  Shows node status ( systemctl status $EXECUTE )
+sync info -- shows sync status ? ($EXECUTE status 2>&1 | jq .SyncInfo) 
+validator info -- Shows validator status ($EXECUTE status 2>&1 | jq .ValidatorInfo)
+node info  --  Shows node status ? ($EXECUTE status 2>&1 | jq .NodeInfo)
+node id   -- Shows node id ?($EXECUTE tendermint show-node-id)
+show keys -- Shows keys ($EXECUTE keys list)
+recover wallet -- Recover your wallet with mnemonic phrases($EXECUTE keys add $WALLET_NAME --recover)
+delete wallet -- Delete your wallet.($EXECUTE keys delete $WALLET_NAME)
+add new wallet (walletname) -- Adds a new wallet with a new name you choose.($EXECUTE keys add cüzdanismi)
+create validator -- Creates validator. As an example: (Create validator command örneğini kendisine gösterelim)
+
+$EXECUTE tx staking create-validator \
+  --amount=7000000$DENOM \
+  --pubkey=$($EXECUTE tendermint show-validator) \
+  --moniker="$MONIKER" \
+  --chain-id=$CHAIN_ID \
+  --commission-rate="0.05" \
+  --commission-max-rate="0.20" \
+  --commission-max-change-rate="0.01" \
+  --min-self-delegation="1000000" \
+  --gas="auto" \
+  --gas-prices="0.0025$DENOM" \
+  --from=$WALLET_NAME
+
+
+delegate token 12748793132uumee -- Delegates given number of tokens. As seen in example, you can choose the number of tokens and the name of the project. 
+Example: deleagte token 100umee 
+Example 2: delegate token 200band? 
+örnek: umeed($EXECUTE) tx staking delegate umeevaloper12h8fpmg5qs570rmlem27km5xu4l2gv0lapuels($VALOPER_ADDRESS)  12748793132($TOKEN)uumee($DENOM) --from=umee12h8fpmg5qs570rmlem27km5xu4l2gv0la9mkw6($WALLET_NAME) --chain-id=umee-1($CHAIN_ID) --gas=auto --fees=3000($TOKEN)uumee($DENOM)
+Not: Her parantez içine aldığım değişken bir önceki alanın yerine gelecek ama anlaşılması için değerleri silmedim.
+withdraw reward -- Withdraws reward to the wallet.
+$EXECUTE tx distribution withdraw-rewards $VALOPER_ADDRESS --from=$WALLET_NAME --commission --chain-id=$CHAIN_ID
+redelegate <FirstValidatorAddress> <destinationValidatorAddress>-- Redelegates the tokens withdrawed. You can choose vote number that project served. 
+$EXECUTE tx staking redelegate <FİRSValidatorAddress> <destinationValidatorAddress> 10000000ulyl --from=$WALLET_NAME --chain-id=$CHAIN_ID --gas=auto --fees 250ulyl
+vote 28 yes/no/abstain/no with veto (28 ilgili proposal’ın sayısını temsil ediyor) Burada oylama seçeneği gösterilebilir veya tutorialstan anlar heralde :D 
+$EXECUTE tx gov vote 28 yes --from $WALLET_NAME --chain-id=$CHAIN_ID
+$EXECUTE tx gov vote 28 no --from $WALLET_NAME --chain-id=$CHAIN_ID
+$EXECUTE tx gov vote 28 abstain --from $WALLET_NAME --chain-id=$CHAIN_ID
+$EXECUTE tx gov vote 28 no with veto --from $WALLET_NAME --chain-id=$CHAIN_ID
+
+
+change validator name -- Changes validator name by taking a name again
+$EXECUTE tx staking edit-validator \
+--moniker=NEWNODENAME \
+--chain-id=$CHAIN_ID \
+--from=$WALLET_NAME
+
+unjail (Hapisten kurtulma / Slahstan kurtulma) : Unjails your account.
+$EXECUTE tx slashing unjail \
+  --broadcast-mode=block \
+  --from=$WALLET_NAME \
+  --chain-id=$CHAIN_ID \
+  --gas=auto --fees 250ulyl
+
+delete node : Deletes node. Be careful using this command please.   
+sudo systemctl stop $EXECUTE
+sudo systemctl disable $EXECUTE
+sudo rm /etc/systemd/system/$EXECUTE* -rf
+sudo rm $(which $EXECUTE) -rf
+sudo rm $HOME/$SYSTEM_FİLE* -rf
+sudo rm $HOME/$EXECUTE* -rf
+sed -i '/EXECUTE_/d' ~/.bash_profile
+
+
+cls-> Clear console for now.
+ll-> Same as linux command ll
+ls-> same as linux command ls

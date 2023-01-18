@@ -2,5 +2,5 @@ bandd
 shentud
 gaiad
 mustafad
-celestiad
+go
 certikd

@@ -1,5 +1,6 @@
-1 bandd
-2 shentud
-3 gaiad
-4 celestiad
-5 certikd
+bandd
+shentud
+gaiad
+celestiad
+certikd
+python

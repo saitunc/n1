@@ -1,1 +1,6 @@
-bandd-shentud-gaiad-python-celestiad-certikd
+bandd
+shentud
+gaiad
+python
+celestiad
+certikd

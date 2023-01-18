@@ -1,6 +1,1 @@
-bandd
-shentud
-gaiad
-go
-celestiad
-certikd
+bandd shentud gaiad go celestiad certikd

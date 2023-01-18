@@ -1,4 +1,5 @@
-1 band
-2 shentu
-3 dropeye
-4 gaia
+1 bandd
+2 shentud
+3 gaiad
+4 celestiad
+5 certikd

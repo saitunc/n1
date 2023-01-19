@@ -2,7 +2,6 @@ bandd
 shentud
 gaiad
 mustafad
-go
 certikd
 cantod
 celestiad

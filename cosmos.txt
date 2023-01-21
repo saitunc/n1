@@ -1,8 +1,8 @@
-bandd
-shentud
-gaiad
-mustafad
-certikd
-cantod
-celestiad
-lavad
+Band
+Shentu
+Gaia
+Mustafa
+Certik
+Canto
+Celestia
+Lava

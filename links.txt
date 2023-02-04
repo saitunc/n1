@@ -1,0 +1,8 @@
+bandd https://api.github.com/repos/bandprotocol/chain/releases
+shentud https://api.github.com/repos/shentufoundation/shentu/releases
+gaiad https://api.github.com/repos/cosmos/gaia/releases
+cantod https://api.github.com/repos/Canto-Network/Canto/releases
+celestiad https://api.github.com/repos/celestiaorg/celestia-node/releases
+Lava https://api.github.com/repos/lavanet/lava/releases
+Tgrade - 
+Sei https://api.github.com/repos/sei-protocol/sei-chain/releases
